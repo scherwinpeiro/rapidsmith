@@ -1,0 +1,16 @@
+apply plugin: 'application'
+
+group = 'de.tu_darmstadt.rs.rapidsmith.gui'
+version = 'SNAPSHOT'
+
+
+
+dependencies {
+	compile project(":")
+
+	compile 'com.trolltech.qt:qtjambi:4.8.5'
+	compile 'com.trolltech.qt:qtjambi-linux64-gcc:4.8.5'
+
+}
+
+mainClassName="edu.byu.ece.rapidSmith.gui.TileColorsNew"

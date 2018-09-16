@@ -1,0 +1,17 @@
+set terminal pdf size 15,22.5
+set output "dumps/".filename.type.".pdf"
+
+set multiplot layout 3,1 rowsfirst
+
+set lmargin at screen 0.02
+
+f(x) = m*x+b
+
+#fit f(x) "dumps/".filename."-total.dat" via m,b
+plot "dumps/".filename."-total.dat" lc rgb 'black' title filename." Total"#, f(x)
+
+#fit f(x) "dumps/".filename."-logic.dat" via m,b
+plot "dumps/".filename."-logic".type.".dat" lc rgb 'black' title filename." Logic"#, f(x)
+
+#fit f(x) "dumps/".filename."-routing.dat" via m,b
+plot "dumps/".filename."-routing".type.".dat" lc rgb 'black' title filename." Routing"#, f(x)
