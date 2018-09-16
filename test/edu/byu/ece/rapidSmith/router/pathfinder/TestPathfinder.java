@@ -42,6 +42,7 @@ public class TestPathfinder {
         public final MockPathfinderNode c;
         private final MockNodeFactory mnf;
         private final Design design;
+        //test
 
         public TestGraph() {
             design = new Design("","xc6slx16csg324");
